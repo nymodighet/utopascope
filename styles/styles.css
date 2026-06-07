@@ -1,0 +1,1199 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	vertical-align: baseline;
+	font-family: inherit;  
+	font-style: inherit;  
+	font-weight: normal;
+	text-align: left;
+	text-decoration: none;
+}
+html, body {
+	position: relative;
+	width: 100%;
+	overflow-x: hidden;
+}
+:focus {
+	outline: 2px #7a7a7a solid;
+	outline-offset: 2px;
+}
+blockquote:before, blockquote:after, q:before, q:after {
+	content: '';
+}
+
+
+/******** FONTS ********/
+@font-face {
+	font-family: 'Plus Jakarta Text';
+	src: url('../sources/fonts/PlusJakartaText-Regular.otf') format('opentype'),
+		 url('../sources/fonts/PlusJakartaText-Regular.ttf') format('truetype'),
+         url('../sources/fonts/PlusJakartaText-Regular.woff') format('woff'); 	
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: 'Plus Jakarta Text';
+	src: url('../sources/fonts/PlusJakartaText-Bold.otf') format('opentype'),
+		 url('../sources/fonts/PlusJakartaText-Bold.ttf') format('truetype'),
+         url('../sources/fonts/PlusJakartaText-Bold.woff') format('woff'); 
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: 'Plus Jakarta Display';
+	src: url('../sources/fonts/PlusJakartaDisplay-Light.otf') format('opentype'),
+		 url('../sources/fonts/PlusJakartaDisplay-Light.ttf') format('truetype'),
+         url('../sources/fonts/PlusJakartaDisplay-Light.woff') format('woff'); 
+}
+
+
+/******** GLOBAL ********/
+p, small, blockquote, ul li, ol li,
+.button, 
+.text-link {
+	color: #010101;	
+	text-align: left;
+	line-height: 1.7;
+}
+
+p, small, blockquote, ul, ol, .moreinfo-tip, .definition-tip {
+	font-family: 'Plus Jakarta Text', sans-serif;
+    font-display: fallback;
+    font-weight: normal;
+}
+
+strong, .button,
+.organizing-define,
+.environment-define,
+.freedom-define,
+.wellness-define,
+.economic-define {
+    font-family: 'Plus Jakarta Text', sans-serif;
+    font-display: fallback;
+    font-weight: bold;
+}
+
+.light {
+    font-family: 'Plus Jakarta Display', sans-serif;
+    font-weight: 300;
+    font-display: fallback;
+}
+
+h1, h2, h3 span, h4, h5, h6,
+blockquote:before,
+footer a,
+span, 
+.hover-label, 
+.side-nav a span, 
+.text-link,
+.context-link, 
+.moreinfo {
+	font-family: 'Syne', sans-serif;
+}
+
+p, small, span, 
+strong, ul, ol,
+.side-nav a span, 
+.button, 
+.text-link,
+.light {
+    font-style: normal;
+}
+
+h1, h2 {
+	width: 100%;
+}
+
+h1, h2, h3, h4, h5 {
+	line-height: 1.1;	
+}
+
+h6, h6 a {
+	line-height: 1.4;	
+}
+
+h1 {
+	font-size: 160%;
+}
+
+h2 {
+	font-size: 90%;
+}
+
+h3 {
+	font-size: clamp(200%, 3vw, 400%);
+	position: absolute;
+	z-index: 20;
+}
+
+h4 {
+	font-size: 200%;
+	padding-bottom: 1rem;
+	width: calc(100% - 4rem);
+	display: inline-block;
+}
+
+h5 {
+	font-size: 150%;
+}
+
+h6 {
+	font-size: 120%;
+}
+
+p, blockquote, a {
+	font-weight: 400;
+	font-size: 102%;
+}
+
+a {
+	cursor: pointer;
+}
+
+em {
+	font-style: italic;
+}
+
+ul {
+	list-style: circle;
+}
+
+ul, ol {
+	margin-left: 9%;
+}
+
+main {
+	position: relative;
+	transition: all 2s ease-in-out;
+}
+
+article {
+	position: relative;
+	display: flex;
+	padding-top: 5rem;
+	margin-bottom: 10vh;
+}
+
+div {
+	width: 100%;
+}
+
+small {
+	font-size: 80%;
+	width: 100%;
+	display: block;
+}
+
+video {
+	pointer-events: none;
+}
+
+blockquote {
+	position: relative;
+	text-indent: -0.9375rem;
+	z-index: 2;
+}
+
+blockquote:before {
+	position: absolute;
+	font-size: 250%;
+	content: '“';
+	top: -1.5rem;
+	left: -1rem;
+	z-index: 1;
+}
+
+.main-button {
+	font-family: 'Syne', sans-serif;
+	font-size: 200%;
+	font-weight: normal;
+	color: #FFFFFF;
+	background-color: #010101;
+	padding: 1rem 3rem;
+	border-radius: 0.375rem;
+}
+
+.main-button:hover {
+	color: #010101;
+	background-color: #FBB6C0;	
+}
+
+.context-link {
+	color: #010101;
+}
+
+.side-nav a span, .text-link, .button, ul li, ol li  {
+	font-size: 95%;
+}
+
+.side-nav a span, .text-link span, .moreinfo-tip, .definition-tip, .explorations-nav a span, footer a span {
+	padding: 0 .125rem;
+	border: none;
+	transition: all 0.3s ease-in-out;
+}
+
+.bottom-nav a span {
+	padding: .125rem;
+	border: none;
+	transition: all 0.3s ease-in-out;
+}
+
+#utopascope {
+	max-width: 700px;
+}
+
+
+/******** HEADER ********/
+header {
+	position: fixed;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: flex-start;
+	align-content: stretch;
+	top: 0;
+	right: 0;
+	left: 0;
+	padding: 1rem 2rem 3rem 2rem;
+	width: 14rem;
+	height: 100%;
+	z-index: 200;
+}
+
+.home-header {
+	height: 4rem;
+	left: auto;
+	right: 0;
+}
+
+.header-items {
+	align-self: flex-start;
+	height: 100%;
+}
+
+.header-items:nth-child(2) {
+	text-align: right;
+}
+
+.button {
+	padding: 0 .125rem;
+	border: none;
+	box-shadow: inset 0 -0.25rem 0 0 #FBB6C0;
+	transition: all 0.3s ease-in-out;
+}
+
+.button:hover {
+	box-shadow: inset 0 -2.25rem 0 0 #FBB6C0;
+}
+
+/******** MAIN NAVIGATION ********/
+nav a {
+	position: absolute;
+	color: #010101;
+	z-index: 20;
+	cursor: pointer;	
+}
+
+nav .main-nav {
+	position: relative;
+}
+
+.nav-header {
+	height: auto;
+}
+
+.navigation-background, .navigation-clusters, .navigation-hovers {
+	width: 100%;
+}
+
+.navigation-hovers {
+	opacity: 0;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+.nav-hovers:hover .navigation-hovers {
+	opacity: 1;
+}
+
+.tooltip-container {
+	position: relative;
+}
+
+#organizing-label {
+	top: 7%;
+	left: 24%;
+	width: 22%;
+	height: 32%;
+}
+
+#organizing-label:hover .hover-label {
+    opacity: 1;
+    background: rgba(255,119,105,0.9);
+}
+
+#environmental-label {
+	top: 11%;
+	right: 26%;
+	width: 21%;
+	height: 32%;
+}
+
+#environmental-label:hover .hover-label {
+    opacity: 1;
+    background: rgba(135,231,210,0.9);
+}
+
+#people-label {
+	top: 29%;
+	left: 13%;
+	width: 14%;
+	height: 36%;
+}
+
+#people-label:hover .hover-label {
+    opacity: 1;
+    background: rgba(255,255,136,0.9);
+}
+
+#wellness-label {
+	top: 42%;
+	left: 38%;
+	width: 24%;
+	height: 32%;
+}
+
+#wellness-label:hover .hover-label {
+    opacity: 1;
+    background: rgba(144,184,241,0.9);
+}
+
+#economic-label {
+	top: 36%;
+	right: 13%;
+	width: 18%;
+	height: 31%;
+}
+
+#economic-label:hover .hover-label {
+    opacity: 1;
+    background: rgba(255,174,126,0.9);
+}
+
+.hover-label {
+    transition: all 0.6s ease-in-out!important;
+	opacity: 0;
+	white-space: nowrap;
+    padding: 0.75rem 1rem;
+    font-size: 175%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+
+
+/******** INNER PAGE NAVIGATION ********/
+.side-nav, .bottom-nav, .explorations-nav {
+	position: fixed;
+	right: 0;
+	padding: 0;
+	width: 24%;
+	z-index: 30;
+}
+
+.side-nav, .explorations-nav {
+	top: 10vh;
+}
+
+.side-nav div, .bottom-nav div, .explorations-nav a {
+	float: right;
+	clear: right;
+	width: auto;
+	padding: 1rem 2rem;
+}
+
+.bottom-nav {
+	bottom: 10vh;
+}
+
+.bottom-nav div {
+	padding: 0.625rem 2rem;
+}
+
+.side-nav a, .bottom-nav a, .explorations-nav a {
+	position: relative;
+	display: block;	
+	text-align: right;
+	line-height: 1.1;
+	color: #010101;
+}
+
+.side-nav .mobile-button, footer a.mobile-button {
+	display: none;
+}
+
+a.disabled {
+	pointer-events: none;
+}
+
+a.disabled span {
+	box-shadow: inset 0 -2.25rem 0 0 #FFFFFF;
+	color: #010101;
+}
+
+
+/******** SECTIONS ********/
+section {
+	clear: both;
+}
+
+.section-background {
+	position: relative;
+	width: 90%;
+	max-width: 62.5rem;
+	z-index: 1;
+}
+
+.moreinfo-tip, .definition-tip {
+	background-color: #FFFFFF;
+}
+
+.moreinfo, .universal-link span, footer a span, .universal-define {
+	box-shadow: inset 0 -0.25rem 0 0 #FFFFFF;
+}
+
+.moreinfo:hover, .universal-link:hover span, footer a span:hover, .footer-active, .universal-define:hover {
+	box-shadow: inset 0 -2.25rem 0 0 #FFFFFF;
+}
+
+.universal-inverse a span {
+	box-shadow: inset 0 -0.25rem 0 0 #FBB6C0;
+}
+
+.universal-inverse a span:hover {
+	box-shadow: inset 0 -2.25rem 0 0 #FBB6C0;
+}
+
+.organizing {
+	background: #FF7769;
+}
+
+.organizing-highlight span {
+	background: #FF7769;
+	box-shadow: 16px 0 0 #FF7769, -16px 0 0 #FF7769;
+}
+
+.organizing-side {
+	background: #FF7769;
+}
+
+.organizing-footer .footer-bar span {
+	box-shadow: inset 0 -0.25rem 0 0 #FF7769;
+}
+
+.organizing-footer .footer-bar span:hover {
+	box-shadow: inset 0 -2.25rem 0 0 #FF7769;
+}
+
+.organizing h3, .environment h3, .freedom h3 {
+	top: 22%;
+}
+
+.environment {
+	background: #87E7D2;
+}
+
+.environment-highlight span {
+	background: #87E7D2;
+	box-shadow: 16px 0 0 #87E7D2, -16px 0 0 #87E7D2;
+}
+
+.environment-side {
+	background: #87E7D2;
+}
+
+.environment-footer .footer-bar span {
+	box-shadow: inset 0 -0.25rem 0 0 #87E7D2;
+}
+
+.environment-footer .footer-bar span:hover {
+	box-shadow: inset 0 -2.25rem 0 0 #87E7D2;
+}
+
+.freedom {
+	background: #FFFF88;
+}
+
+.freedom-highlight span {
+	background: #FFFF88;
+	box-shadow: 16px 0 0 #FFFF88, -16px 0 0 #FFFF88;
+}
+
+.freedom-side {
+	background: #FFFF88;
+}
+
+.freedom-footer .footer-bar span {
+	box-shadow: inset 0 -0.25rem 0 0 #FFFF88;
+}
+
+.freedom-footer .footer-bar span:hover {
+	box-shadow: inset 0 -2.25rem 0 0 #FFFF88;
+}
+
+.wellness {
+	background-color: #90B8F1;
+}
+
+.wellness-highlight span {
+	background: #90B8F1;
+	box-shadow: 16px 0 0 #90B8F1, -16px 0 0 #90B8F1;
+}
+
+.wellness-side {
+	background: #90B8F1;
+}
+
+.wellness-footer .footer-bar span {
+	box-shadow: inset 0 -0.25rem 0 0 #90B8F1;
+}
+
+.wellness-footer .footer-bar span:hover {
+	box-shadow: inset 0 -2.25rem 0 0 #90B8F1;
+}
+
+.wellness h3 {
+	top: 33%;
+}
+
+.economic {
+	background-color: #FFAE7E;
+}
+
+.economic-highlight span {
+	background: #FFAE7E;
+	box-shadow: 16px 0 0 #FFAE7E, -16px 0 0 #FFAE7E;
+}
+
+.economic-side {
+	background: #FFAE7E;
+}
+
+.economic-footer .footer-bar span {
+	box-shadow: inset 0 -0.25rem 0 0 #FFAE7E;
+}
+
+.economic-footer .footer-bar span:hover {
+	box-shadow: inset 0 -2.25rem 0 0 #FFAE7E;
+}
+
+.economic h3 {
+	top: 49%;
+}
+
+.non-sections {
+	background: #FBB6C0;
+	min-height: 100vh;
+}
+
+.section-container {
+	flex: 1 100%;
+	width: 100%;
+}
+
+.section-header {
+	position: relative;
+	padding-bottom: 9vh;
+}
+
+.side-images {
+	position: absolute;
+	right: 0;
+	max-width: 10rem;
+}
+
+.side-images:nth-child(3n+1) {
+	top: 25%;
+}
+
+.side-images:nth-child(3n+2) {
+	top: 50%;
+}
+
+.side-images:nth-child(3n+3) {
+	top: 75%;
+}
+
+.nobreak {
+	white-space: nowrap;
+}
+
+.moreinfo, .define {
+	cursor: pointer;
+	position: relative;
+}
+
+.moreinfo-tip {
+	white-space: normal;
+}
+
+.moreinfo-tip, .definition-tip {
+	position: absolute;
+	bottom: -1rem;
+	left: -50%;
+	font-size: 85%;
+	padding: 0.5rem;
+    width: 25rem;
+    text-indent: 0;
+	font-weight: 400;
+	line-height: 1.7;
+    z-index: 60;
+    opacity: 0;	
+}
+
+.moreinfo:hover .moreinfo-tip,
+.define:hover .definition-tip {
+	opacity: 1!important;
+	bottom: 1.0625rem;
+}
+
+
+/******** BODY ********/
+.full-height {
+	min-height: 100vh;
+}
+
+.container {
+	padding: 8% 25% 12% 12%;
+	position: relative;
+	display: block;
+}
+
+.container-wide, .container-pages, .container-sections {
+	position: relative;
+	display: block;
+}
+
+.container-wide, .container-sections {
+	padding: 3rem 2rem 12% 14rem;
+}
+
+.container-pages {
+	padding: 14% 2rem 12% 14rem;
+}
+
+.container-pages h5 {
+	padding-top: 2rem;
+}
+
+.flex-container {
+	display: flex;
+	position: relative;
+	flex-wrap: wrap;
+	justify-content: flex-start;
+	align-items: flex-start;
+	align-content: flex-start;
+	width: 58%;
+	z-index: 10;
+}
+
+.highlight {
+	padding: 5px 0;
+	margin: 0 5px;
+}
+
+.second-line {
+	margin-left: 3rem;
+}
+
+.indent {
+	padding: 0 0 0 9%;
+}
+
+.intro {
+	font-size: 130%;
+	font-weight: 300;
+}
+
+.ease, #utopascope-footer {
+	transition: all 0.3s ease-in-out;
+}
+
+.padding-small, p, ul li, ol li {
+	padding-bottom: 0.75rem;
+}
+
+.padding-medium {
+	padding-bottom: 2rem;
+}
+
+.padding-large {
+	padding-bottom: 4rem;
+}
+
+.padding-xlarge {
+	padding-bottom: 20vh;
+}
+
+.padding-none {
+	padding-bottom: 0;
+}
+
+.fade {
+	opacity: 0;
+	transition: all 1s ease-in-out;
+}
+
+.visible {
+	opacity: 1;
+}
+
+.fading-out-right, .fading-out-left {
+	transition: all 0.8s ease-in;
+}
+
+.fading-out-right {
+	transform: translateX(-100vw);
+}
+
+.fading-out-left {
+	transform: translateX(100vw);
+}
+
+
+/******** TRAYS ********/
+.mobile-tray {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	padding-top: 1.5rem;
+	opacity: 0;
+	min-height: 100vh;
+	transform: translateX(100%);
+	transition: all 1s ease-in-out;
+	z-index: 200;
+}
+
+.mobile-tray nav {
+	width: calc(100% - 5.25rem);
+}
+
+.tray-open {
+	opacity: 1;
+	transform: translateX(0);
+}
+
+body .mobile-tray .tray-open {
+	overflow: hidden;
+    position: fixed;
+}
+
+.back-button, .tactic-header .back-button img {
+	display: block;
+	width: 6rem;
+}
+
+.tray-close {
+	width: 1.25rem;
+}
+
+.tray-close:hover {
+	opacity: 0.5;
+}
+
+.back-hover, .back-button .universal-link {
+	position: absolute;
+	top: 0;
+	opacity: 0;
+}
+
+.back-button .universal-link {
+	top: 50%;
+	left: 50%;
+	transform: translateX(-50%) translateY(-50%);
+	color: #FFFFFF;
+	font-size: 75%;
+	transition: ease-in-out 0.3s;
+	z-index: 1;
+}
+
+.back-button:hover .back-hover, .back-button:hover .universal-link {
+	opacity: 1;
+}
+
+
+/******** ARTICLES ********/
+.article-column .indent-tactics, .indent-explorations {
+	width: 91%;
+	float: right;
+}
+
+.like-column {
+	position: absolute;
+	width: 4rem;
+	top: 5.125rem;
+	right: 0px;
+}
+
+.back-button {
+	position: fixed;
+	bottom: 10vh;
+}
+
+/******** APPLAUSE ********/
+applause-button {
+	color: #C1BEC1!important;
+}
+
+applause-button, .mobile-applause {
+	width: 30px;
+	height: 30px;
+	font-family: 'Plus Jakarta Text', sans-serif;
+    font-display: fallback;
+    font-weight: normal;
+    font-size: 11px;
+    margin: 0 auto;
+}
+
+applause-button .style-root:after {
+	border: none!important;
+	content: 'vote to organize!'!important;
+	text-align: center;
+	position: absolute;
+	top: 0.5rem;
+	background-color: #FFFFFF;
+	border-radius: 0!important;
+	color: #010101;
+	opacity: 0;
+	width: 4rem;
+	height: 2rem;
+	transition: all 0.3s ease;
+}
+
+applause-button .style-root:hover:after {
+	opacity: 1!important;
+	top: -3.5rem;
+}
+
+applause-button .shockwave,
+applause-button:hover .shockwave, 
+applause-button svg g {
+	display: none!important;
+} 
+
+applause-button .style-root:before {
+	content: url('../sources/utopascope_star_default.svg');
+	width: 1.875rem;
+	transition: all 0.3s ease;
+	cursor: pointer;
+}
+
+applause-button svg:active .style-root:before {
+	transform: scale(1.2);
+}
+
+applause-button.clap .clap-count,
+applause-button .clap-count {
+/*	font-size: 1rem!important;*/
+	font-family: 'Plus Jakarta Text', sans-serif;
+	text-align: center!important;
+	color: #010101;
+	margin-top: -0.5rem;
+/*	color: #C1BEC1;*/
+    font-size: 11px!important;
+}
+
+applause-button.clap .style-root:before,
+applause-button.clapped .style-root:before,
+applause-button.clap-limit-exceeded .style-root:before {
+	content: url('../sources/utopascope_star_default-active.svg');
+}
+
+applause-button .style-root {
+	--main-color: transparent;
+}
+
+.mobile-applause {
+	text-align: center;
+	width: 50px;
+	line-height: 1;
+	padding: 2rem 0 0 0;
+	margin-left: -0.625rem;
+	display: none;
+}
+
+h6 a, .context-link, p .context-link, .context-link span {
+	text-decoration: none;
+    background-image: linear-gradient(currentColor, currentColor);
+    background-position: 0% 100%;
+    background-repeat: no-repeat;
+    background-size: 0% 1px;
+    transition: background-size .3s;
+}
+
+h6 a:hover, h6 a:focus, p .context-link:hover, p .context-link:focus, li .context-link:hover, li .context-link:focus, 
+.context-link span:hover, .context-link span:focus {
+	background-size: 100% 1px;
+}
+
+
+
+/******** LOGOS ********/
+.logo, .logo-static {
+	display: block;
+	position: relative;
+	margin-left: -20%;
+	left: 2rem;
+}
+
+.logo-hover, .logo-default, .logo-large, .logo-animation {
+	position: absolute;
+    top: 0;
+    left: 0;	
+}
+
+.logo-hover, .logo-default {
+	width: 9.5rem;	
+	transition: all 0.3s ease-out;
+}
+
+.logo-hover {
+	opacity: 1;	
+	z-index: 201;
+	filter: blur(0.75px);
+}
+
+.logo:hover .logo-hover, .logo-animation {
+	opacity: 0;
+}
+
+.logo-default, .logo-large {
+	z-index: 202;	
+}
+
+.logo-static {
+	padding-bottom: 16rem;
+	margin-left: -9%;
+}
+
+.logo-animation, .logo-large {
+	width: 30rem;
+}
+
+.logo-sm {
+	width: 7.5rem;
+}
+
+a.logo:focus {
+	height: 4rem;
+	width: 10rem;
+}
+
+
+/******** PRELOADER ********/
+.preloader {
+	display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+}
+
+.preloader img {
+	flex: 1; 
+	margin: auto;
+}
+
+#stop-scrolling {
+	height: 100%!important;
+	overflow: hidden!important;
+}
+
+/******** RELEASE ********/
+.institute-logo {
+	max-width: 7rem;
+	margin-right: 2rem;
+	float: right;
+	clear: both;
+}
+
+.open {
+	line-height: 1.7;
+}
+
+/******** FOOTER ********/
+footer {
+	position: fixed;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: #010101;
+	padding: 1rem 2rem;	
+	z-index: 220;
+}
+
+footer .hidden-footer {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: flex-start;
+	align-content: stretch;
+}
+
+footer .footer-bar {
+	color: #FFFFFF;
+}
+
+footer .footer-bar:hover {
+	color: #010101;
+}
+
+footer a {
+	font-size: 85%;
+}
+
+footer a span {
+	padding: 0.125rem;
+}
+
+.bottom-nav a, .explorations-nav a {
+	font-size: 75%;
+}
+
+/******** MEDIA QUERIES ********/
+
+/* small displays */
+@media only screen and (max-width: 1500px) {
+	.main-nav { width: 1000px!important; }
+	header { padding: 1rem 1rem 3rem 2rem; }
+	.side-nav, .explorations-nav { top: 12vh; }
+	.container { padding: 10% 15% 15% 4%; }
+	.section-background { max-width: 50rem; }
+}
+
+/* tablet */
+@media only screen and (max-width: 1000px) {
+	.main-nav { width: 800px; }
+	.hover-label { font-size: 150%; }
+	#organizing-label { top: 4%; }
+	#environmental-label { top: 6%; }
+	#people-label { top: 17%; }
+	#wellness-label { top: 25%; }
+	#economic-label { top: 21%; right: 12%; }
+	header { padding: 1rem 1rem 3rem 2rem; width: 11rem; }
+	h3 { font-size: clamp(200%, 3.5vw, 300%); }
+	p, blockquote { font-size: 90%; }
+	blockquote:before { font-size: 200%; top: -1rem; }
+	.container { padding: 8rem 16% 15% 4%; }
+	.container-wide { padding: 8rem 16% 12% 11rem; }
+	.container-pages { padding: 20% 24% 12% 8rem; }
+	.section-header { padding-bottom: 5vh; }
+	article { padding-top: 0; }
+	.side-nav { top: 0; padding: 0; width: 100%; }
+	.side-nav div { width: calc(100% - 4rem); }
+	.side-nav .mobile-button, footer a.mobile-button { display: inline-block; }
+	.mobile-tray .universal-link { padding: 1rem 2rem; margin-bottom: 1rem; } 
+	header .side-nav div:nth-child(n+2) { display: none; }
+	.logo, .logo-static { margin-left: -25%; }
+	.tactic-header .back-button img, .back-button { width: 5rem; }
+	.back-button .universal-link { transform: translateX(-50%) translateY(100%); }
+	.flex-container { width: 100%; }
+	.padding-xlarge { padding-bottom: 15vh; }
+	.side-images { max-width: 12%; }
+	.moreinfo-tip, .definition-tip { width: 20rem; }
+	.explorations-nav { top: 5vh; width: 20%; }
+	.hidden-footer .freedom-side a span { box-shadow: inset 0 -0.25rem 0 0 #FFFF88; } 
+	.hidden-footer .freedom-side a span:hover { box-shadow: inset 0 -2.25rem 0 0 #FFFF88; } 
+	footer { transform: translateY(7.375rem); }
+	footer .hidden-footer { flex-direction: column; }
+	footer a, .bottom-nav a { line-height: 1.7; }
+	footer a { text-align: left; float: left; clear: left; }
+	.bottom-nav { display: block; width: 50%; bottom: 1rem; padding: 0 1.75rem 0 0; }
+	.bottom-nav a { color: #FFFFFF; text-align: right; float: right; clear: right; }
+	.bottom-nav div { background: none; padding: 0; } 
+	.universal-inverse a span { box-shadow: inset 0 -0.25rem 0 0 #FFFFFF!important; }
+	.universal-inverse a span:hover { box-shadow: inset 0 -2.25rem 0 0 #FFFFFF!important; }
+	.bottom-nav .organizing-side a span { box-shadow: inset 0 -0.25rem 0 0 #FF7769; } 
+	.bottom-nav .organizing-side a span:hover { box-shadow: inset 0 -2.25rem 0 0 #FF7769; } 
+	.bottom-nav .environment-side a span { box-shadow: inset 0 -0.25rem 0 0 #87E7D2; } 
+	.bottom-nav .environment-side a span:hover { box-shadow: inset 0 -2.25rem 0 0 #87E7D2; } 
+	.bottom-nav .freedom-side a span { box-shadow: inset 0 -0.25rem 0 0 #FFFF88; } 
+	.bottom-nav .freedom-side a span:hover { box-shadow: inset 0 -2.25rem 0 0 #FFFF88; } 
+	.bottom-nav .wellness-side a span { box-shadow: inset 0 -0.25rem 0 0 #90B8F1; } 
+	.bottom-nav .wellness-side a span:hover { box-shadow: inset 0 -2.25rem 0 0 #90B8F1; } 
+	.bottom-nav .economic-side a span { box-shadow: inset 0 -0.25rem 0 0 #FFAE7E; } 
+	.bottom-nav .economic-side a span:hover { box-shadow: inset 0 -2.25rem 0 0 #FFAE7E; } 
+	.institute-logo { max-width: 5rem; margin-top: 20%; }
+	.footer-opened { transform: translateY(0); }
+	.footer-opened, .footer-opened a:nth-child(n+2) { display: block; }
+	.hidden-footer a.footer-bar { margin-top: 1rem; margin-bottom: 0; }
+	.bottom-nav > div > a { margin-top: 1.25rem!important; margin-bottom: 0; }
+	.bottom-nav a:hover { color: #010101; }
+}
+
+/* mobile */
+@media only screen and (max-width: 767px) {
+	.main-nav { width: 450px; margin-top: 20vh; }
+	.hover-label { font-size: 100%; padding: 0.375rem 0.5rem; opacity: 1; }
+	.container, .container-wide { padding: 12rem 2rem 20% 2rem; }
+	.container-sections	{ padding: 12rem 3.5rem 20% 2rem; }
+	.container-pages { padding: 32% 28% 20% 2rem; }
+	h3 { font-size: clamp(200%, 5vw, 300%); }
+	h4 { font-size: 170%; }
+	h5 { font-size: 140%; }
+	h6, h6 a { font-size: 105%; }
+	header { height: auto; left: auto; right: auto; padding: 2rem 1rem 3rem 1rem; }
+	blockquote:before { left: -0.5rem; }
+	.navigation-background { display: none; }
+	#organizing-label { top: 0; left: 11%; width: 42%; height: 22%; }
+	#organizing-label:link .hover-label { background: rgba(255,119,105,0.9); }
+	#environmental-label { top: 10%; right: 8%; width: 40%; height: 22%; }
+	#environmental-label:link .hover-label { background: rgba(135,231,210,0.9); }
+	#people-label { top: 25%; left: 10%; width: 30%; height: 28%; }
+	#people-label:link .hover-label { background: rgba(255,255,136,0.9); }
+    #wellness-label { top: auto; left: 32%; bottom: 24%; width: 41%; height: 21%; }
+	#wellness-label:link .hover-label { background: rgba(144,184,241,0.9); }
+    #economic-label { top: 38%; right: 10%; width: 32%; height: 20%; }
+	#economic-label:link .hover-label { background: rgba(255,174,126,0.9); }
+	.full-height section p { padding-top: 100vh; }
+    .nav-hovers:link .navigation-hovers { opacity: 1; }
+	.inner-headers { width: 100%; background: #FBB6C0; min-height: 1rem; }
+	.side-nav div { padding: 2rem; }
+	.logo, .logo-static { left: 0; margin-left: 0; }
+	.logo-hover, .logo-default { width: 7rem; }
+	.logo-sm { width: 6rem; }
+	.mobile-launch { width: 33%; float: right; }
+	.mobile-tray .universal-link { padding: 2rem 2rem 0 0; margin-bottom: 0; } 
+	.back-button { top: 1.5rem; left: 9rem; bottom: auto; z-index: 100; }
+	applause-button .style-root:hover:after { display: none; }
+	.tactic-header { width: 100%; }
+	.tactic-header .back-button img, .back-button { width: 3rem; }
+	.mobile-applause { display: block; }
+	.section-background { max-width: 40em; }
+	.indent { padding: 0; }
+	.article-column .indent-tactics { width: 100%; }
+	.fade { opacity: 1; }
+	.indent-explorations { width: 100%; }
+	.side-images { max-width: 3.5rem; }
+	.moreinfo-tip, .definition-tip { width: 10rem; left: -20%; }
+	.explorations-nav { padding: 0; }
+	.button { font-size: 85%; }
+	.institute-logo { max-width: 3rem; }
+}
