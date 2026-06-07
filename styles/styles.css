@@ -900,11 +900,11 @@ applause-button .style-root:hover:after {
 	top: -3.5rem;
 }
 
-applause-button .shockwave,
+/*applause-button .shockwave,
 applause-button:hover .shockwave, 
 applause-button svg g {
 	display: none!important;
-} 
+} */
 
 applause-button .style-root:before {
 	content: url('../sources/utopascope_star_default.svg');
