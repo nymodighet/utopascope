@@ -22,9 +22,7 @@ $(document).ready(function() {
     $('a.right-link').click(function(event){
         event.preventDefault();
         linkLocation = this.href;
-	    $('.like-column').each(function() {
-	        $(this).css('top', $(this).position().top + 'px');
-	    });
+	    $('.like-column').css('top', '5.125rem');
         $($body).fadeOut(800, redirectPage); 
         $('.fade-out').addClass('fading-out-right');    
     });
@@ -32,9 +30,7 @@ $(document).ready(function() {
     $('a.left-link').click(function(event){
         event.preventDefault();
         linkLocation = this.href;
-	    $('.like-column').each(function() {
-	        $(this).css('top', $(this).position().top + 'px');
-	    });
+	    $('.like-column').css('top', '5.125rem');
         $($body).fadeOut(800, redirectPage); 
         $('.fade-out').addClass('fading-out-left');    
     });
