@@ -144,7 +144,7 @@ h4 {
 	font-size: 200%;
 	padding-bottom: 1rem;
 	width: calc(100% - 4rem);
-	display: inline-block;
+	/*display: inline-block;*/
 }
 
 h5 {
@@ -841,16 +841,23 @@ body .mobile-tray .tray-open {
 
 
 /******** ARTICLES ********/
+.article-column {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+}
+
 .article-column .indent-tactics, .indent-explorations {
 	width: 91%;
 	float: right;
 }
 
 .like-column {
-	position: absolute;
+	/*position: absolute;*/
 	width: 4rem;
-	top: 5.125rem;
-	right: 0px;
+	flex-shrink: 0;
+	/*top: 5.125rem;
+	right: 0px;*/
 }
 
 .back-button {
