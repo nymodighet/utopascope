@@ -910,11 +910,26 @@ applause-button svg {
     opacity: 0!important;
 }
 
+applause-button .shockwave {
+	top: -3.25rem;
+	border-color: transparent!important;
+}
+
+applause-button:not(.clapped) .shockwave:hover::before, 
+applause-button:not(.clapped) .shockwave:focus-visible::before {
+	opacity: 0!important;
+}
+
 applause-button .style-root:before {
 	content: url('../sources/utopascope_star_default.svg');
 	width: 1.875rem;
 	transition: all 0.3s ease;
 	cursor: pointer;
+	transform: scale(1);
+}
+
+applause-button .style-root:hover:before {
+	transform: scale(1.1);
 }
 
 applause-button svg:active .style-root:before {
