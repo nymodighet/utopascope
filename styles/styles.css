@@ -849,7 +849,7 @@ body .mobile-tray .tray-open {
 .like-column {
 	position: absolute;
 	width: 4rem;
-	top: 5.125rem;
+	top: 5.125rem!important;
 	right: 0px;
 }
 
