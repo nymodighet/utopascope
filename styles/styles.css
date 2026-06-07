@@ -906,6 +906,10 @@ applause-button svg g {
 	display: none!important;
 } */
 
+applause-button svg {
+    opacity: 0;
+}
+
 applause-button .style-root:before {
 	content: url('../sources/utopascope_star_default.svg');
 	width: 1.875rem;
